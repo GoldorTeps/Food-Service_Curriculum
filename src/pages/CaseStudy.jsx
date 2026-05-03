@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { motion } from 'framer-motion'
-import { cases } from '../data/cases'
+import { cases, contactInfo } from '../data/cases'
 import { videoManifest } from '../data/videoManifest'
 
 const CaseStudy = () => {
@@ -110,9 +110,9 @@ const CaseStudy = () => {
 
         {/* Action Button */}
         <div style={{ marginTop: '100px', padding: '60px', backgroundColor: 'var(--bg-secondary)', borderRadius: '4px', textAlign: 'center' }}>
-          <h3 style={{ marginBottom: '20px' }}>¿Te interesa este tipo de enfoque?</h3>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>Podemos hablar sobre cómo aplicar estas estrategias a tu proyecto.</p>
-          <a href="mailto:adavidjanerperez@gmail.com" className="btn">Contactar ahora</a>
+          <h3 style={{ marginBottom: '20px' }}>¿Te interesa este trabajo?</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>Puedo hacer algo similar para tu proyecto o equipo.</p>
+          <a href={`mailto:${contactInfo.email}`} className="btn">Contactar</a>
         </div>
       </div>
     </motion.div>

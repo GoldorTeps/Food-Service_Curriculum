@@ -1,52 +1,49 @@
 import React from 'react'
+import { Github, Linkedin } from 'lucide-react'
 import { contactInfo } from '../data/cases'
 
-const Footer = () => {
-  return (
-    <footer id="contacto" style={{
-      padding: '80px 0',
-      backgroundColor: 'var(--bg-secondary)',
-      marginTop: '100px',
-      borderTop: '1px solid #eee'
+const Footer = () => (
+  <footer style={{
+    padding: '32px 0',
+    backgroundColor: 'var(--bg-secondary)',
+    borderTop: '1px solid #eee'
+  }}>
+    <div className="container" style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      gap: '12px'
     }}>
-      <div className="container">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '60px'
-        }}>
-          <div>
-            <h3 style={{ marginBottom: '20px' }}>Contacto</h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '10px' }}>
-              Disponible para proyectos de comunicación estratégica, narrativa y producción visual.
-            </p>
-            <div style={{ marginTop: '20px' }}>
-              <a href={`mailto:${contactInfo.email}`} className="btn btn-outline" style={{ marginBottom: '10px', display: 'inline-block', marginRight: '10px' }}>
-                {contactInfo.email}
-              </a>
-              <p style={{ fontWeight: 600 }}>{contactInfo.phone}</p>
-            </div>
-          </div>
-          <div>
-            <h3 style={{ marginBottom: '20px' }}>Siguientes Pasos</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Te invito a explorar las secciones de Comunicación y Campañas para entender mi enfoque pragmático y orientado a resultados.
-            </p>
-          </div>
-        </div>
-        <div style={{
-          marginTop: '80px',
-          paddingTop: '40px',
-          borderTop: '1px solid #eee',
-          color: 'var(--text-secondary)',
-          fontSize: '0.8rem',
-          textAlign: 'center'
-        }}>
-          &copy; {new Date().getFullYear()} David Janer. Comunicación y Estrategia.
-        </div>
+      <span style={{ fontWeight: 800, fontSize: '0.9rem' }}>David Janer</span>
+      <span style={{ color: 'var(--text-secondary)', fontSize: '0.78rem' }}>
+        &copy; {new Date().getFullYear()} · Desarrollador & Comunicador · Málaga
+      </span>
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        <a href={`mailto:${contactInfo.email}`} style={{ color: 'var(--text-secondary)', fontSize: '0.83rem' }}>
+          {contactInfo.email}
+        </a>
+        <a
+          href={contactInfo.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center' }}
+          aria-label="GitHub"
+        >
+          <Github size={16} strokeWidth={1.8} />
+        </a>
+        <a
+          href={contactInfo.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center' }}
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={16} strokeWidth={1.8} />
+        </a>
       </div>
-    </footer>
-  )
-}
+    </div>
+  </footer>
+)
 
 export default Footer
