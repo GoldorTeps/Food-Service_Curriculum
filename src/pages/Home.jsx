@@ -162,9 +162,18 @@ const Home = () => {
             }}>
               David Janer · Desarrollador & Comunicador · Málaga
             </p>
-            <h1 style={{ maxWidth: '820px', marginBottom: '28px' }}>
-              Construyo herramientas.<br />Comunico con criterio.
+            <h1 style={{ maxWidth: '820px', marginBottom: '18px' }}>
+              Antes gestionaba redes.<br />Ahora, tengo un nuevo superpoder.
             </h1>
+            <p style={{
+              fontSize: '1rem',
+              color: 'var(--text-secondary)',
+              maxWidth: '560px',
+              marginBottom: '28px',
+              lineHeight: 1.6
+            }}>
+              Sé hablar con una IA.
+            </p>
             <p style={{
               fontSize: '1.2rem',
               color: 'var(--text-secondary)',

@@ -20,6 +20,17 @@ export const cases = [
     url: 'https://github.com/GoldorTeps/zero_cog_DEMO',
     featured: true
   },
+  {
+    id: 'spain-leads-scraper',
+    title: 'Spain Leads Scraper',
+    folder: 'dev/spain-leads-scraper',
+    category: 'dev',
+    tag: 'Herramienta B2B · Python',
+    description: 'Herramienta de inteligencia comercial que cruza OpenStreetMap, Paginas Amarillas y Google Places API para construir bases de prospectos B2B cualificadas en minutos.',
+    stack: ['Python', 'BeautifulSoup', 'Requests', 'OpenPyXL', 'Google Places API', 'Overpass API'],
+    image: '/Scraping/Scraping.png',
+    featured: true
+  },
 
   // SECTION: WEB & FRONTEND
   {
